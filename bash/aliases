@@ -6,4 +6,5 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias ll='ls -laFh'
+alias serve='python -m SimpleHTTPServer'
 
