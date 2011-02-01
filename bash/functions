@@ -1,0 +1,18 @@
+function new_patch()
+{
+  [[ $# -lt 1 ]] && echo "new_patch comment [patch_num] [patch_type]" && return 1
+
+  COMMENT=$1
+  PATCH_NUM=${2:-1}
+  PATCH_TYPE=${3:-sql}
+
+  touch `date '+%Y-%m-%d'`-patch-$PATCH_NUM-ecoleman-$COMMENT.$PATCH_TYPE
+}
+
+function remove_svnexec()
+{
+  if [[ `svn proplist -v "$1" | grep 'svn:executable'` ]]; then
+    svn propdel svn:executable "$1"
+  fi
+}
+
