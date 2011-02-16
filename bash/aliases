@@ -6,5 +6,4 @@ fi
 alias ls='ls --color=auto'
 alias grep='grep --color=auto' 
 alias ll='ls -laFh'
-alias serve='python -m SimpleHTTPServer'
 

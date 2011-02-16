@@ -1,3 +1,14 @@
+function serve_dir()
+{
+  PYTHON="python"
+
+  if command -v python2 &>/dev/null; then
+    PYTHON="python2"
+  fi
+
+  $PYTHON -m SimpleHTTPServer
+}
+
 function new_patch()
 {
   [[ $# -lt 1 ]] && echo "new_patch comment [patch_num] [patch_type]" && return 1
