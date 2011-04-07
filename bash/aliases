@@ -6,4 +6,5 @@ fi
 alias ls='ls --color=auto'
 alias grep='grep --color=auto' 
 alias ll='ls -laFh'
+alias json_pp="ruby -r json -e 'jj JSON.parse gets'"
 
