@@ -10,6 +10,8 @@ alias ll='ls -laFh'
 alias json_pp="ruby -r json -e 'jj JSON.parse gets'"
 alias list_fonts="fc-list | sed 's,:.*,,' | sort -u"
 
+alias ack='ack --pager="less -R"'
+
 alias pacman='pacman-color'
 
 alias memrss='while read command percent rss; do if [[ "${command}" != "COMMAND" ]]; then rss="$(bc <<< "scale=2;${rss}/1024")"; fi; printf "%-26s%-8s%s\n" "${command}" "${percent}" "${rss}"; done < <(ps -A --sort -rss -o comm,pmem,rss | head -n 11)'
