@@ -71,3 +71,10 @@ unset dircolors
 # setup the main ls alias if we've established common args
 test -n "$LS_COMMON" && 
 alias ls="command ls $LS_COMMON"
+
+# use vim for man pages
+export MANPAGER="/bin/sh -c \"unset PAGER;col -b -x | \
+    vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
+    -c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
+    -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
+
