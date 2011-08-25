@@ -27,6 +27,10 @@ HISTCONTROL=ignoreboth
 HISTFILESIZE=10000
 HISTSIZE=10000
 
+[ -d ~/.vim/bin ]  && export PATH=~/.vim/bin:$PATH
+[ -d ~/bin ]       && export PATH=~/bin:$PATH
+[ -d /usr/lib/cw ] && export PATH=/usr/lib/cw:$PATH
+
 # ----------------------------------------------------------------------
 # PAGER / EDITOR
 # ----------------------------------------------------------------------
