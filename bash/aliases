@@ -11,6 +11,7 @@ alias json_pp="ruby -r json -e 'jj JSON.parse gets'"
 alias list_fonts="fc-list | sed 's,:.*,,' | sort -u"
 
 alias ack='ack --pager="less -R"'
+alias highlight="highlight -O xterm256"
 
 alias pacman='pacman-color'
 
