@@ -1,5 +1,15 @@
 # vim: set ft=sh : 
 
+# define an alias and sudo-able alias
+salias()
+{
+  local a c
+  a=$(echo "$1" | cut -f1 -d=)
+  c=$(echo "$1" | cut -f2- -d=)
+  alias $a="$c"
+  alias s$a="sudo $c"
+}
+
 function serve_dir()
 {
   PYTHON="python"
