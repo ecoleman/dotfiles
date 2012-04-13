@@ -1,4 +1,9 @@
-# vim: set ft=sh : 
+# vim: set ft=sh :
+
+function open()
+{
+    xdg-open $1 >/dev/null
+}
 
 # define an alias and sudo-able alias
 salias()
