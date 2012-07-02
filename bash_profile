@@ -1,5 +1,6 @@
-# vim: set ft=sh : 
+# vim: set ft=sh :
 
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
+

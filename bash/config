@@ -1,9 +1,10 @@
-# vim: set ft=sh : 
+# vim: set ft=sh :
 
-export PS1="\n\[\033[0;32m\]\[\033[0;35m\]\u\[\033[0m\]@\[\033[0;32m\]\h: \[\033[0;35m\]\[\033[0m\]\w\[\033[0;35m\]\n \[\033[0;33m\]\$(__git_ps1 \"(%s) \")\[\033[0;35m\]→\[\033[0m\] "
+export PS1="\n\[\033[0;32m\]\[\033[0;35m\]\u\[\033[0m\]@\[\033[0;32m\]\h: \[\033[0;35m\]\[\033[0m\]\w\[\033[0;35m\]\n \[\033[0;33m\]\$(__git_ps1 \"(%s) \")\[\033[0;35m\]λ\[\033[0m\] "
 
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
   export TERM=xterm-256color
+  #export TERM=rxvt-unicode-256color
 fi
 
 export EDITOR="vim"
@@ -30,6 +31,7 @@ HISTSIZE=10000
 [ -d ~/.vim/bin ]  && export PATH=~/.vim/bin:$PATH
 [ -d ~/bin ]       && export PATH=~/bin:$PATH
 [ -d /usr/lib/cw ] && export PATH=/usr/lib/cw:$PATH
+[ -d ~/.gem/ruby/1.9.1/bin ] && export PATH=$PATH:~/.gem/ruby/1.9.1/bin
 
 # ----------------------------------------------------------------------
 # PAGER / EDITOR
@@ -38,7 +40,7 @@ HISTSIZE=10000
 #HAVE_VIM=$(command -v vim)
 
 # EDITOR
-export EDITOR=vim 
+export EDITOR=vim
 
 # PAGER
 if test -n "$(command -v less)" ; then
@@ -73,7 +75,7 @@ test -n "$dircolors" && {
 unset dircolors
 
 # setup the main ls alias if we've established common args
-test -n "$LS_COMMON" && 
+test -n "$LS_COMMON" &&
 alias ls="command ls $LS_COMMON"
 
 # use vim for man pages
